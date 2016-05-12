@@ -3,22 +3,14 @@
 
 static uint8_t i2cread(void) {
   uint8_t x;
-  #if ARDUINO >= 100
   x = Wire.read();
-  #else
-  x = Wire.receive();
-  #endif
   //Serial.print("0x"); Serial.println(x, HEX);
   return x;
 }
 
 
 static void i2cwrite(uint8_t x) {
-  #if ARDUINO >= 100
   Wire.write((uint8_t)x);
-  #else
-  Wire.send(x);
-  #endif
 }
 
 /**************************************************************************/
