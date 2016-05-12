@@ -1,5 +1,5 @@
-#include <Wire.h>
-
+#include "spark_wiring.h"
+#include "spark_wiring_i2c.h"
 #include "Adafruit_MPL115A2.h"
 
 static uint8_t i2cread(void) {
