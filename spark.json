@@ -1,7 +1,7 @@
 {
-    "name": "Adafruit-MPL115A2",
+    "name": "Adafruit_MPL115A2",
     "version": "1.0.0",
     "author": "Emre Demirors <emre.x.demirors@gmail.com>",
-    "license": "MIT",
+    "license": "BSD",
     "description": "Reads Adafruit MPL115A2 humidity/temperature sensor."
 }
