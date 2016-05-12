@@ -1,5 +1,5 @@
-#include "spark_wiring.h"
-#include "spark_wiring_i2c.h"
+#include "application.h"
+
 /*=========================================================================
     I2C ADDRESS/BITS
     -----------------------------------------------------------------------*/
@@ -32,6 +32,8 @@ class Adafruit_MPL115A2{
   float getTemperature(void);
   void getPT(float *P, float *T);
 
+  void write8(uint8_t a, uint8_t d);
+
  private:
   float _mpl115a2_a0;
   float _mpl115a2_b1;
@@ -39,4 +41,9 @@ class Adafruit_MPL115A2{
   float _mpl115a2_c12;
 
   void readCoefficients(void);
+  
+  uint8_t read8(uint8_t a);
+  uint8_t mode;
+  
 };
+

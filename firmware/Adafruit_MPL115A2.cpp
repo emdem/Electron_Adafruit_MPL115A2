@@ -1,7 +1,11 @@
-#include "spark_wiring.h"
-#include "spark_wiring_i2c.h"
 
 #include "Adafruit_MPL115A2.h"
+
+/**************************************************************************/
+/*!
+    @brief  Instantiates a new MPL115A2 class
+*/
+/**************************************************************************/
 
 static uint8_t i2cread(void) {
   uint8_t x;
@@ -111,7 +115,7 @@ float Adafruit_MPL115A2::getTemperature() {
 */
 /**************************************************************************/
 void Adafruit_MPL115A2::getPT(float *P, float *T) {
-  uint16_t 	pressure, temp;
+  uint16_t      pressure, temp;
   float     pressureComp;
 
   // Get raw pressure and temperature settings
@@ -139,6 +143,3 @@ void Adafruit_MPL115A2::getPT(float *P, float *T) {
   *T = ((float) temp - 498.0F) / -5.35F +25.0F;           // C
   
 }
-
-
-
