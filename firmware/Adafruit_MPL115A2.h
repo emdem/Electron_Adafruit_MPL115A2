@@ -1,6 +1,6 @@
 #include "spark_wiring.h"
 #include "spark_wiring_i2c.h"
-#include "I2Cdev.h"
+#include "I2Cdev/I2Cdev.h"
 
 /*=========================================================================
     I2C ADDRESS/BITS
